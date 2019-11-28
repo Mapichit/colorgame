@@ -2,8 +2,10 @@
     text-align: center;
     background: white;
     height: 30px;
-    position: relative;
+    margin: auto 0;
 
+
+    
 
     &__nav{
         border: none;
@@ -18,26 +20,32 @@
         outline: none;
         padding: 0 10px;
 
-        
-       &__start{
-           margin-left: 200px;
-
-           @include respond(phone){
-            margin-left: 5px;
+        @include respond(tab-port-2){
+            font-size: 0.7rem;
         }
-       }
+
+        @include respond(phone){
+            font-size: 0.6rem;
+            padding: 0 3px;
+        }
+
+        @include respond (phone-2){
+            font-size: 0.5rem;       
+        }
+
+        
+     
 
     
         &__hover:hover{
             color: white;
             background: steelblue;
         }
+
     }
 
 }
 
 
 
-#timer{
-    position: absolute;
-}
+

@@ -7,8 +7,17 @@
 }
 
 @mixin respond($breakpoint) {
+
+    @if $breakpoint == phone-2{
+        @media (max-width: 20em) {@content}; //320px
+    }
+
     @if $breakpoint == phone{
-        @media (max-width: 600px) {@content}; //1em = 16px = 600px
+        @media (max-width: 37.5em) {@content}; //1em = 16px 600px
+    }
+
+    @if $breakpoint == tab-port-2{
+        @media (max-width: 46.25em) {@content}; //740px
     }
 
     @if $breakpoint == tab-port{

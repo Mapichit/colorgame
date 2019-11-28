@@ -35,7 +35,7 @@ body {
         width: 38%;
         margin: 2% 5%;
         padding-bottom: 38%; } }
-    @media (max-width: 600px) {
+    @media (max-width: 37.5em) {
       .square__box {
         width: 45%;
         margin: 2.5%;
@@ -43,19 +43,31 @@ body {
 
 .header {
   color: white;
-  text-align: center;
   background: steelblue;
-  margin: 0;
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1.1;
-  padding: 20px 0; }
+  padding: 20px 0;
+  text-align: center; }
+  @media (max-width: 37.5em) {
+    .header {
+      font-size: 1.7rem; } }
+  @media (max-width: 20em) {
+    .header {
+      font-size: 1.4rem; } }
+
+.hidden {
+  opacity: 0;
+  position: relative; }
+
+#timer {
+  position: absolute; }
 
 .menu {
   text-align: center;
   background: white;
   height: 30px;
-  position: relative; }
+  margin: auto 0; }
   .menu__nav {
     border: none;
     background: none;
@@ -68,14 +80,47 @@ body {
     transition: all 0.3s;
     outline: none;
     padding: 0 10px; }
-    .menu__nav__start {
-      margin-left: 200px; }
-      @media (max-width: 600px) {
-        .menu__nav__start {
-          margin-left: 5px; } }
+    @media (max-width: 46.25em) {
+      .menu__nav {
+        font-size: 0.7rem; } }
+    @media (max-width: 37.5em) {
+      .menu__nav {
+        font-size: 0.6rem;
+        padding: 0 3px; } }
+    @media (max-width: 20em) {
+      .menu__nav {
+        font-size: 0.5rem; } }
     .menu__nav__hover:hover {
       color: white;
       background: steelblue; }
 
-#timer {
-  position: absolute; }
+.row {
+  max-width: 80%;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left;
+    margin-bottom: 1rem; }
+    .row [class^="col-"]:last-child {
+      margin-bottom: 10rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) /2); }
+    .row .col-1-of-2:not(:nth-child(2n + 2)) {
+      margin-right: 6rem; }
+  .row .col-1-of-3 {
+    width: calc((100% - 12rem) /3); }
+    .row .col-1-of-3:not(:nth-child(3n + 3)) {
+      margin-right: 6rem; }
+    @media (max-width: 56.25em) {
+      .row .col-1-of-3 {
+        width: 100%; } }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 12rem) /3)); }
+    .row .col-2-of-3:not(:last-child) {
+      margin-right: 6rem; }
+    @media (max-width: 56.25em) {
+      .row .col-2-of-3 {
+        width: 100%; } }
