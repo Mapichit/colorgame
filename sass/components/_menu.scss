@@ -1,0 +1,43 @@
+.menu{
+    text-align: center;
+    background: white;
+    height: 30px;
+    position: relative;
+
+
+    &__nav{
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        height: 100%;
+        font-weight: 700;
+        color:steelblue;
+        font-family: 'Rubik', sans-serif;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        outline: none;
+        padding: 0 10px;
+
+        
+       &__start{
+           margin-left: 200px;
+
+           @include respond(phone){
+            margin-left: 5px;
+        }
+       }
+
+    
+        &__hover:hover{
+            color: white;
+            background: steelblue;
+        }
+    }
+
+}
+
+
+
+#timer{
+    position: absolute;
+}

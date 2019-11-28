@@ -1,0 +1,39 @@
+.square{
+
+    
+    @include clearfix;
+
+    width: 90vh;
+    margin: 10vh auto 0 auto;
+    
+
+
+
+    @include respond(tab-land){
+        width: 90vw;
+        margin: 2vh auto 0 auto;
+    }
+    
+
+    &__box{
+        width: 30%;
+        background: #FFDA1A;
+        padding-bottom: 30%;
+        float: left;
+        margin: 1.66%;
+        border-radius: 15%;
+        transition: background 0.2s;
+
+      @include respond(tab-land){
+          width: 38%;
+          margin: 2% 5%;
+          padding-bottom: 38%;
+      }
+
+      @include respond(phone){
+        width: 45%;
+        margin: 2.5%;
+        padding-bottom: 45%;
+    }
+    }
+}
